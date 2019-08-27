@@ -9,6 +9,6 @@
 
 * [Sitio oficial](https://vuejs.org/v2/guide/installation.html)
 
-##Codepen Clase
+## Codepen Clase
 
 * [EJERCICIOS VUE](https://codepen.io/collection/XWZwwR/)
