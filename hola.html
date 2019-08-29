@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="ejercicio">
+   <!-- 1) Llenar el <p> de abajo con el apellido del alumno, nombre del grupo y cantidad de integrantes - usar Interpolación -->
+    <p>Apellido: {{nombre}} - Nombre del grupo: {{grupo}} Cantidad del grupo: {{cant}}</p>
+    <!-- 2) agregar un tag con el número de grupo multiplicado por 3 - usar un método, NOTA: no debe cambiar el numero de grupo del ejercicio 1-->
+    <p>La cantidad del grupo multiplicado x 3 es: {{multiplicado(3)}}</p>
+    
+    <!-- 3) Buscar una imagen en google y hacer un binding del atributo "src" - ver ejemplo https://codepen.io/sofiaferragut/pen/rgZNpx -->
+    <div>
+        <img v-bind:src="link" style="width:600px;height:600px" >
+    </div>
+  
+</div>
+</body>
+<script>
+
+new Vue( //una nueva instancia de vue
+{
+  //Argumento el
+  el:"#ejercicio",
+  data: {
+    nombre: "Pose",
+    grupo: "99",
+    cant: 4,
+    link: "https://vignette.wikia.nocookie.net/lossimpson/images/e/ec/Clancy_Wiggum.png/revision/latest?cb=20150426060357&path-prefix=es"
+  },
+  methods: {
+  	multiplicado: function(num){
+  		return this.cant * num;
+  	},
+  }
+}
+);
+
+
+
+</script>
+</html>
